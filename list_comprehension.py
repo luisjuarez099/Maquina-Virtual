@@ -1,8 +1,8 @@
 resl=0
 def run():
-    nums=[1,2,3,4,5,6,7,8,9,10]
+    # nums=[1,2,3,4,5,6,7,8,9,10]
     nums_exp=[]
-    for i in nums:
+    for i in range(0,100+1):
         resl=i**2
         nums_exp.append(resl)
     print(nums_exp)
