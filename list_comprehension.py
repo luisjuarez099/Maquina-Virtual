@@ -1,12 +1,12 @@
 resl=0
 def run():
-    # nums=[1,2,3,4,5,6,7,8,9,10]
-    nums_exp=[]
-    for i in range(0,21):
-        resl=i**2
-        if resl%3 ==0:
-            continue
-        nums_exp.append(resl)
+    # nums_exp=[]
+    # for i in range(0,21):
+    #     resl=i**2
+    #     if resl%3 ==0:
+    #         continue
+    #     nums_exp.append(resl)
+    nums_exp=[pow(i,2) for i in range(1,21) if i%3 !=0]
     print(nums_exp)
     
 
