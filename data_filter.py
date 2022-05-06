@@ -9,7 +9,7 @@ DATA = [
     {
         'name': 'Fernando',
         'age': 23,
-        'organization': 'platzi',
+        'organization': 'Platzi',
         'position': 'UX Designer',
         'language': 'javascript',
     },
@@ -51,7 +51,7 @@ DATA = [
     {
         'name': 'Juan',
         'age': 17,
-        'organization': '',
+        'organization':'Platzi',
         'position': 'platzi',
         'language': 'go',
     },
@@ -64,22 +64,29 @@ DATA = [
     },
     {
         'name': 'Lorena',
-        'age': 56,
+        'age': 16,
         'organization': 'Python Organization',
         'position': 'Language Maker',
-        'language': 'python',
+        'language': 'Python',
     },
 ]
 
 def run():
-    all_py_devs=[worker["name"] for worker in DATA if worker["language"]== "javascript"]
-    all_plz_workers=[worker["name"] for worker in DATA if worker["organization"] == "Platzi"]
+    #all_py_devs=[worker["name"] for worker in DATA if worker["language"]== "javascript"]
+    #all_plz_workers=[worker["name"] for worker in DATA if worker["organization"] == "Platzi"]
     
-    #filter edad
-    adults=list(filter(lambda worker: worker["age"]>=18,DATA))
-    adults=list(map(lambda worker: worker["name"], adults))
-    old_people=list(map(lambda worker: worker | {"old":worker["age"]>70},DATA))
-    for worker in old_people:
+    #all_py_devs=(list(filter(lambda worker: worker["organization"] == 'Platzi' and worker["age"]>=18,DATA)))
+    #all_plz_workers=(list(map(lambda worker: worker["age"] <=18,DATA  )))
+    
+    #adults=list(filter(lambda worker: worker["age"]>=18,DATA))#List comprehension
+    #adults=list(map(lambda worker: worker["name"], adults))#List comprehension
+    #old_people=list(map(lambda worker: worker | {"old":worker["age"]>70},DATA))
+    
+    #adults=[worker["name"] for worker in DATA if worker["age"] <=18]
+    adults=[worker["name"] for worker in DATA if worker["language"] =="javascript"]
+
+
+    for worker in adults:
         print(worker)
 
 
